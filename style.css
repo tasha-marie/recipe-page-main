@@ -1,6 +1,10 @@
 @font-face {
-    font-family: Outfit, sans-serif;
-    src: url(./assets/fonts/outfit/Outfit-VariableFont_wght.ttf);
+	font-family: "Outfit";
+	font-style: normal;
+	font-weight: 400 600 900;
+	font-stretch: 100%;
+	src: local("Outfit Thin"), local("Outfit-Thin"), url(./assets/fonts/outfit/Outfit-VariableFont_wght.ttf) format("woff2"), url(../assets/fonts/outfit-thin.woff) format("woff");
+	font-display: auto;
 }
 
 @font-face {
@@ -18,7 +22,7 @@
     --prep-header: hsl(332, 51%, 32%);
     --prep-container: hsl(330, 100%, 98%);
     --font-header: "Young Serif", serif;
-    --font-text: Outfit, sans-serif;
+    --font-text: "Outfit", sans-serif;
 }
 
 html {
@@ -38,6 +42,7 @@ body {
     font-size: 16px;
     line-height: 1.5;
     font-family: var(--font-text);
+    font-weight: medium;
     color: var(--main-text);
     display: flex;
     flex-direction: column;
@@ -61,14 +66,14 @@ img {
     max-width: 100%;
     display: block;
     border-radius: 2rem;
-    padding: 1rem;
 }
 
 h1 {
     font-family: var(--font-header);
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: bold;
     color: var(--h1-text);
+    margin-bottom: 0;
 }
 
 .prep-section {
@@ -83,7 +88,69 @@ h1 {
     margin-left: 1rem;
 }
 
+.prep-section li {
+    padding-left: 0.75rem;
+}
+
 .prep-section li::marker {
     color: var(--prep-header);
 }
+
+.ingredients-section h2,
+.instructions-section h2,
+.nutrition-table h2 {
+    font-family: var(--font-header);
+    color: var(--h2-text);
+    font-size: 2rem;
+}
+
+.ingredients-section li,
+.instructions-section li {
+    padding-left: 0.75rem;
+}
+
+.ingredients-section li::marker,
+.instructions-section li::marker {
+    color: var(--h2-text)
+}
+
+.instructions-section li::marker {
+    font-weight: bold;
+}
+
+.nutrition-table {
+    display: flex;
+    flex-direction: column;
+}
+
+table {
+    display: table;
+    border-spacing: 3rem;
+    border-collapse: collapse;
+    text-indent: 0;
+}
+
+caption, th {
+    text-align: start;
+}
+
+th, td {
+    padding: 1.5rem;
+}
+
+th {
+    font-weight: 400;
+}
+
+td {
+    font-weight: bold;
+    color: var(--h2-text);
+}
+
+tr:nth-of-type(1),
+tr:nth-of-type(2),
+tr:nth-of-type(3) {
+    border-bottom: 2px solid var(--prep-container);
+}
+
 
