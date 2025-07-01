@@ -1,0 +1,28 @@
+@font-face {
+    font-family: Outfit, sans-serif;
+    src: url(./assets/fonts/outfit/Outfit-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: "Young Serif", serif;
+    src: url(./assets/fonts/young-serif/YoungSerif-Regular.ttf);
+}
+
+:root {
+    --white: hsl(0, 0%, 100%);
+    --background-color: hsl(30, 54%, 90%);
+    --card-background: hsl(30, 18%, 87%);
+    --main-text: hsl(30, 10%, 34%);
+    --h1-text: hsl(24, 5%, 18%);
+    --h2-text: hsl(14, 45%, 36%);
+    --prep-text: hsl(332, 51%, 32%);
+    --prep-container: hsl(330, 100%, 98%);
+    --font-header: "Young Serif", serif;
+    --font-text: Outfit, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
