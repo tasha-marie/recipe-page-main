@@ -83,3 +83,7 @@ h1 {
     margin-left: 1rem;
 }
 
+.prep-section li::marker {
+    color: var(--prep-header);
+}
+
