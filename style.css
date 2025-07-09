@@ -1,171 +1,210 @@
 @layer reset {
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-    }
-  
-    /* https://kilianvalkhof.com/2022/css-html/your-css-reset-needs-text-size-adjust-probably/ */
-    html {
-      -moz-text-size-adjust: none;
-      -webkit-text-size-adjust: none;
-      text-size-adjust: none;
-    }
-  
-    body,
-    h1,
-    h2,
-    h3,
-    h4,
-    p,
-    figure,
-    blockquote,
-    dl,
-    dd {
-      margin: 0;
-    }
-  
-    /* https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html */
-    [role="list"] {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-  
-    body {
-      min-block-size: 100vh;
-      line-height: 1.6;
-    }
-  
-    h1,
-    h2,
-    h3,
-    button,
-    input,
-    label {
-      line-height: 1.1;
-    }
-  
-    h1,
-    h2,
-    h3,
-    h4 {
-      text-wrap: balance;
-    }
-  
-    p,
-    li {
-      text-wrap: pretty;
-    }
-  
-    img,
-    picture {
-      max-inline-size: 100%;
-      display: block;
-    }
-  
-    input,
-    button,
-    textarea,
-    select {
-      font: inherit;
-    }
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
   }
 
+  /* https://kilianvalkhof.com/2022/css-html/your-css-reset-needs-text-size-adjust-probably/ */
+  html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+  }
+
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  figure,
+  blockquote,
+  dl,
+  dd {
+    margin: 0;
+  }
+
+  /* https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html */
+  [role="list"] {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    min-block-size: 100vh;
+    line-height: 1.6;
+  }
+
+  h1,
+  h2,
+  h3,
+  button,
+  input,
+  label {
+    line-height: 1.1;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-wrap: balance;
+  }
+
+  p,
+  li {
+    text-wrap: pretty;
+  }
+
+  img,
+  picture {
+    max-inline-size: 100%;
+    display: block;
+  }
+
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+}
+
 @layer base {
-    @font-face {
-        font-family: 'YoungSerif';
-        src: url('assets/fonts/young-serif/YoungSerif-Regular.ttf');
-    }
-    
-    @font-face {
-        font-family: 'Outfit';
-        src: url('assets/fonts/outfit/Outfit-VariableFont_wght.ttf');
-    }
+  @font-face {
+    font-family: "YoungSerif";
+    src: url("assets/fonts/young-serif/YoungSerif-Regular.ttf");
+  }
 
-    :root {
-        --clr-white: hsl(0, 0%, 100%);
-        --clr-stone-100: hsl(30, 54%, 90%);
-        --clr-stone-150: hsl(30, 18%, 87%);
-        --clr-stone-600: hsl(30, 10%, 34%);
-        --clr-stone-900: hsl(24, 5%, 18%);
-        --clr-brown-800: hsl(14, 45%, 36%);
-        --clr-rose-800: hsl(332, 51%, 32%);
-        --clr-rose-50: hsl(330, 100%, 98%);
+  @font-face {
+    font-family: "Outfit";
+    src: url("assets/fonts/outfit/Outfit-VariableFont_wght.ttf");
+  }
 
-        --ff-heading: 'YoungSerif', serif;
-        --ff-body: 'Outfit', sans-serif;
+  :root {
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-stone-100: hsl(30, 54%, 90%);
+    --clr-stone-150: hsl(30, 18%, 87%);
+    --clr-stone-600: hsl(30, 10%, 34%);
+    --clr-stone-900: hsl(24, 5%, 18%);
+    --clr-brown-800: hsl(14, 45%, 36%);
+    --clr-rose-800: hsl(332, 51%, 32%);
+    --clr-rose-50: hsl(330, 100%, 98%);
 
-        --fs-400: 1rem;
-        --fs-600: 1.125rem;
-        --fs-700: 1.5rem;
-    }
+    --ff-heading: "YoungSerif", serif;
+    --ff-body: "Outfit", sans-serif;
 
-    :root {
-        /* primitives */
-        --text-main: var(--clr-stone-600);
-        --text-heading: var(--clr-stone-900);
-        --text-subheading: var(--clr-brown-800);
-        --text-card-heading: var(--clr-rose-800);
-        --text-strong: var(--clr-stone-900);
+    --fs-400: 1rem;
+    --fs-600: 1.75rem;
+    --fs-700: 2rem;
+  }
 
-        --background-body: var(--clr-stone-100);
-        --background-main: var(--clr-stone-150);
-        --background-card: var(--clr-rose-50);
+  :root {
+    /* primitives */
+    --text-main: var(--clr-stone-600);
+    --text-heading: var(--clr-stone-900);
+    --text-subheading: var(--clr-brown-800);
+    --text-card-heading: var(--clr-rose-800);
+    --text-strong: var(--clr-stone-900);
 
-        --fs-heading: var(--fs-700);
-        --fs-subheading: var(--fs-600);
-        --fs-body: var(--fs-400);
+    --background-body: var(--clr-stone-100);
+    --background-main: var(--clr-stone-150);
+    --background-card: var(--clr-rose-50);
 
-        --ff-subheading: var(--ff-body);
+    --fs-heading: var(--fs-700);
+    --fs-subheading: var(--fs-600);
+    --fs-body: var(--fs-400);
 
-        --border-radius-1: 0.25rem;
-        --border-radius-2: 0.5rem;
-        --border-radius-3: 0.75rem;
-    }
+    --ff-subheading: var(--ff-body);
 
-    html {
-        font-family: var(--ff-body);
-        line-height: 1.6;
-    }
+    --border-radius-1: 0.75rem;
+    --border-radius-2: 1rem;
+  }
 
-    body {
-        font-size: var(--fs-body);
-        color: var(--text-main);
-        background-color: var(--background-body);
-    }
+  html {
+    font-family: var(--ff-body);
+    line-height: 1.6;
+  }
 
-    h1 {
-      font-family: var(--ff-heading);
-      font-size: var(--fs-heading);
-      color: var(--text-heading);
-    }
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--fs-body);
+    color: var(--text-main);
+    background-color: var(--background-body);
+  }
 
-    h2 {
-      font-family: var(--ff-heading);
-      font-size: var(--fs-subheading);
-      color: var(--text-subheading);
-    }
+  #main {
+    background-color: var(--clr-white);
+    max-width: 700px;
+    border-radius: var(--border-radius-2)
+  }
 
-    .card-heading h2 {
-      font-family:var(--ff-subheading);
-    }
+  h1 {
+    font-family: var(--ff-heading);
+    font-size: var(--fs-heading);
+    color: var(--text-heading);
+  }
 
-    strong {
-      color: var(--text-heading)
-    }
+  h2 {
+    font-family: var(--ff-heading);
+    font-size: var(--fs-subheading);
+    color: var(--text-subheading);
+  }
 
-    li::marker {
-      color: var(--text-subheading);
-      font-weight: 700;
-    }
+  strong {
+    color: var(--text-heading);
+  }
 
-    th {
-      font-weight: 400;
-    }
+  li::marker {
+    color: var(--text-subheading);
+    font-weight: 700;
+  }
 
-    td {
-      color: var(--text-subheading);
-      font-weight: 700;
-    }
+  li {
+    padding-left: 1rem;
+  }
+
+  th {
+    font-weight: 400;
+  }
+
+  td {
+    color: var(--text-subheading);
+    font-weight: 700;
+  }
+
+  img {
+    border-radius: var(--border-radius-2);
+  }
+}
+
+@layer card {
+
+  .wrapper {
+    padding: 1.5rem;
+  }
+
+  .card {
+    background-color: var(--background-card);
+    padding: 1.5rem;
+    border-radius: var(--border-radius-1);
+  }
+
+  .card-heading {
+    font-family: var(--ff-subheading);
+    color: var(--text-card-heading);
+  }
+
+  .card-list::marker {
+    color: var(--text-card-heading);
+  }
+}
+
+@layer table {
+  
 }
