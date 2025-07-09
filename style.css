@@ -183,7 +183,7 @@
   }
 }
 
-@layer card {
+@layer special {
 
   .wrapper {
     padding: 1.5rem;
@@ -203,8 +203,4 @@
   .card-list::marker {
     color: var(--text-card-heading);
   }
-}
-
-@layer table {
-  
 }
