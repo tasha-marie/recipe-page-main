@@ -1,0 +1,124 @@
+@layer reset {
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+  
+    /* https://kilianvalkhof.com/2022/css-html/your-css-reset-needs-text-size-adjust-probably/ */
+    html {
+      -moz-text-size-adjust: none;
+      -webkit-text-size-adjust: none;
+      text-size-adjust: none;
+    }
+  
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    p,
+    figure,
+    blockquote,
+    dl,
+    dd {
+      margin: 0;
+    }
+  
+    /* https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html */
+    [role="list"] {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+  
+    body {
+      min-block-size: 100vh;
+      line-height: 1.6;
+    }
+  
+    h1,
+    h2,
+    h3,
+    button,
+    input,
+    label {
+      line-height: 1.1;
+    }
+  
+    h1,
+    h2,
+    h3,
+    h4 {
+      text-wrap: balance;
+    }
+  
+    p,
+    li {
+      text-wrap: pretty;
+    }
+  
+    img,
+    picture {
+      max-inline-size: 100%;
+      display: block;
+    }
+  
+    input,
+    button,
+    textarea,
+    select {
+      font: inherit;
+    }
+  }
+
+@layer base {
+    @font-face {
+        font-family: 'YoungSerif';
+        src: url('assets/fonts/young-serif/YoungSerif-Regular.ttf');
+    }
+    
+    @font-face {
+        font-family: 'Outfit';
+        src: url('assets/fonts/outfit/Outfit-VariableFont_wght.ttf');
+    }
+
+    :root {
+        --clr-white: hsl(0, 0%, 100%);
+        --clr-stone-100: hsl(30, 54%, 90%);
+        --clr-stone-150: hsl(30, 18%, 87%);
+        --clr-stone-600: hsl(30, 10%, 34%);
+        --clr-stone-900: hsl(24, 5%, 18%);
+        --clr-brown-800: hsl(14, 45%, 36%);
+        --clr-rose-800: hsl(332, 51%, 32%);
+        --clr-rose-50: hsl(330, 100%, 98%);
+
+        --ff-heading: 'YoungSerif', serif;
+        --ff-body: 'Outfit', sans-serif;
+
+        --fs-400: 1rem;
+        --fs-600: 1.125rem;
+        --fs-700: 1.5rem;
+    }
+
+    :root {
+        /* primitives */
+        --text-main: var(--clr-stone-600);
+        --text-heading: var(--clr-stone-900);
+        --text-subheading: var(--clr-brown-800);
+        --text-card-heading: var(--clr-rose-800);
+        --text-strong: var(--clr-stone-900);
+
+        --background-body: var(--clr-stone-100);
+        --background-main: var(--clr-stone-150);
+        --background-card: var(--clr-rose-50);
+
+        --fs-heading: var(--fs-700);
+        --fs-subheading: var(--fs-600);
+        --fs-body: var(--fs-400);
+
+        --border-radius-1: 0.25rem;
+        --border-radius-2: 0.5rem;
+        --border-radius-3: 0.75rem;
+    }
+}
