@@ -96,9 +96,10 @@
     --ff-heading: "YoungSerif", serif;
     --ff-body: "Outfit", sans-serif;
 
-    --fs-400: 1rem;
-    --fs-600: 1.75rem;
-    --fs-700: 2rem;
+    --fs-100: 1rem;
+    --fs-150: 1.25rem;
+    --fs-200: 1.5rem;
+    --fs-300: 2rem;
   }
 
   :root {
@@ -113,9 +114,10 @@
     --background-main: var(--clr-stone-150);
     --background-card: var(--clr-rose-50);
 
-    --fs-heading: var(--fs-700);
-    --fs-subheading: var(--fs-600);
-    --fs-body: var(--fs-400);
+    --fs-heading: var(--fs-300);
+    --fs-subheading: var(--fs-200);
+    --fs-body: var(--fs-100);
+    --fs-card-heading: var(--fs-150);
 
     --ff-subheading: var(--ff-body);
 
@@ -125,23 +127,23 @@
 
   html {
     font-family: var(--ff-body);
-    line-height: 1.6;
+    line-height: 1.5;
   }
 
   body {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     font-size: var(--fs-body);
     color: var(--text-main);
     background-color: var(--background-body);
+    overflow-x: hidden;
   }
 
   #main {
     background-color: var(--clr-white);
-    max-width: 700px;
-    border-radius: var(--border-radius-2)
+    border-radius: var(--border-radius-2);
+    max-width: 720px;
+    margin: 0 auto;
   }
 
   h1 {
@@ -184,9 +186,8 @@
 }
 
 @layer special {
-
   .wrapper {
-    padding: 1.5rem;
+    padding: 0.75rem 2rem;
   }
 
   .card {
@@ -198,9 +199,71 @@
   .card-heading {
     font-family: var(--ff-subheading);
     color: var(--text-card-heading);
+    font-size: var(--fs-card-heading);
   }
 
   .card-list::marker {
     color: var(--text-card-heading);
   }
+
+  table {
+    width: 600px;
+    border-collapse: collapse;
+  }
+
+  tbody {
+    width: 100%;
+  }
+
+  caption {
+    padding-top: 1.5rem;;
+    text-align: left;
+  }
+
+  tr:nth-child(-n + 3) {
+    border-bottom: 2px solid var(--background-card);
+  }
+
+  th {
+    text-align: left;
+  }
+
+  th, td {
+    padding: 1rem 15rem 1rem 0;
+  }
+
+  @media (width < 500px) {
+    #main {
+      border-radius: 0;
+      margin: 0;
+      padding: 0;
+    }
+  
+    img {
+      border-radius: 0;
+    }
+
+    table {
+      width: 300px;
+      border-collapse: collapse;
+    }
+  
+    th, td {
+      padding: 1rem 1rem 0.5rem 1rem;
+    }
+  }
 }
+
+.attribution {
+  font-size: 12px;
+  text-align: center;
+}
+.attribution a {
+  color: var(--text-card-heading);
+}
+
+.attribution a:hover {
+  color: var(--background-card);
+}
+
+
